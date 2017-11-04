@@ -1,0 +1,6 @@
+V8 engine - JavaScript Engine
+
+- In a nutshell, a JS engine basically converts ths JS into a machine code so that machine can understand
+- Node.js is written in C++
+- At the heart of Node.js is the V8 Engine
+- V8 engine converts our JS in machine code
