@@ -1,0 +1,9 @@
+// BUFFERS - Temporary storage spot for a chunk of data
+// that is being transfered from one place to another
+
+// Buffer is filled with data, then passed along
+
+// Transfer small chunks of data at a time.
+
+//STREAM - A stream of data that flows over time from one place to another
+// In Node.js we can create streams to transfer data and increase performance
