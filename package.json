@@ -1,0 +1,15 @@
+{
+  "name": "nodejs_sandbox",
+  "version": "1.0.0",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, sunt architecto sapiente rerum, obcaecati cum libero porro quis facere a aspernatur sit, eaque atque fuga.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vishesh Thakur",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
