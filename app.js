@@ -1,29 +1,13 @@
-var http = require('http');
-var fs = require('fs');
+var express = require('express');
 
-var server = http.createServer(function(req,res){
-    console.log('request was made: ' + req.url);
-    if(req.url === '/home' || req.url === '/'){
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        var myReadStream = fs.createReadStream(__dirname + '/index.html', 'utf8');
-        myReadStream.pipe(res);
-    } else if(req.url === '/contactus'){
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        var myReadStream = fs.createReadStream(__dirname + '/contact.html', 'utf8');
-        myReadStream.pipe(res);
-    } else if(req.url === '/api/ninjas'){
-        var ninjas = [{name: 'ryu', age: 29}, {name:'yoshi', age: 25}];
-        res.writeHead(200, {'Content-Type': 'application/json'});
-        res.end(JSON.stringify(ninjas));
-    } else {
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        var myReadStream = fs.createReadStream(__dirname + '/404.html', 'utf8');
-        myReadStream.pipe(res);
-    }
-    
-    //res.end('howdy gang!');
+var app = express();
 
-});
+app.get('/', function(req,res){
+    res.send('this is the homepage');
+})
 
-server.listen(3001, '127.0.0.1');
+app.get('/contact', function(req,res){
+    res.send('this is the contact page');
+})
+app.listen(3001);
 console.log('Now listening to port:3001');
